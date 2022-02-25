@@ -37,7 +37,8 @@ router.post("/signUser", async (req, res) => {
 
   const cookieOptions = {
     expire: new Date().setHours(new Date().getHours() + 24),
-    sameSite: "Lax",
+    sameSite: "None",
+    secure: true,
     httpOnly: true,
   };
 
